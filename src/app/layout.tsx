@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${sourceCodePro.variable} font-mono bg-[#131313] text-white flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow container mx-auto px-6 py-12">{children}</main>
-        <Footer className="mt-auto" /> {/* This ensures the footer stays at the bottom */}
+        <Footer/>
       </body>
     </html>
   );
