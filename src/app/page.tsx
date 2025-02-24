@@ -8,7 +8,7 @@ export default function Home() {
           <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg text-center md:text-left">
             <h1 className="text-4xl font-extrabold">Welcome to My Portfolio</h1>
             <p className="text-lg text-gray-400 mt-2">
-              Computer Science Major | Software Engineering
+              Sean Hawi | Computer Science Major | Software Engineering
             </p>
           </div>
 
