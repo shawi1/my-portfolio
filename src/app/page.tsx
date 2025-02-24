@@ -6,7 +6,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
         <div className="flex flex-col justify-between space-y-6">
           <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg text-center md:text-left">
-            <h1 className="text-4xl font-extrabold">Welcome to My Portfolio</h1>
+            <h1 className="text-4xl font-extrabold">My Portfolio</h1>
             <p className="text-lg text-gray-400 mt-2">
               Sean Hawi | Computer Science Major | Software Engineering
             </p>
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg flex flex-col justify-center h-full">
           <h2 className="text-3xl font-semibold mb-4 text-gray-200">About Me</h2>
           <p className="text-gray-400 leading-relaxed">
-            I am a passionate software engineer majoring in Computer Science at CSUF. with experience in full stack technologies like Next.js, Node.js, Javascript/Typescript, React, and TailwindCSS.
+            I am a passionate software engineer majoring in Computer Science at CSUF. With experience in full stack technologies like Next.js, Node.js, Javascript/Typescript, React, and TailwindCSS.
             I enjoy building scalable, user-friendly applications with clean and efficient code.
           </p>
           <p className="text-gray-400 mt-4">
