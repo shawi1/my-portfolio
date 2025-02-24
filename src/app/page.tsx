@@ -27,15 +27,15 @@ export default function Home() {
         <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg flex flex-col justify-center h-full">
           <h2 className="text-3xl font-semibold mb-4 text-gray-200">About Me</h2>
           <p className="text-gray-400 leading-relaxed">
-            I am a passionate software engineer with experience in modern web technologies like **Next.js, React, and TailwindCSS.** 
+            I am a passionate software engineer with experience in fll stack technologies like Next.js, React, and TailwindCSS.
             I enjoy building scalable, user-friendly applications with clean and efficient code.
           </p>
           <p className="text-gray-400 mt-4">
-            Throughout my career, I have worked on multiple projects, developing **efficient, well-structured, and maintainable code**. 
-            I am passionate about **problem-solving, innovation, and continuous learning**.
+            Throughout my career, I have worked on multiple projects, developing efficient, well-structured, and maintainable code. 
+            I am passionate about problem-solving, innovation, and continuous learning.
           </p>
           <p className="text-gray-400 mt-4">
-            When I'm not coding, I enjoy reading about **emerging tech trends, collaborating on open-source projects, and mentoring new developers**.
+            When I'm not coding, I enjoy reading sci-fi novels, collaborating on open-source projects, and everything basketball.
           </p>
         </div>
       </div>
