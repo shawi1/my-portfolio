@@ -27,7 +27,7 @@ export default function Home() {
         <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg flex flex-col justify-center h-full">
           <h2 className="text-3xl font-semibold mb-4 text-gray-200">About Me</h2>
           <p className="text-gray-400 leading-relaxed">
-            I am a passionate software engineer majoring in Computer Science at CSUF. With experience in full stack technologies like Next.js, Node.js, Javascript/Typescript, React, and TailwindCSS.
+            I am a Computer Science major at California State University, Fullerton. With experience in full stack technologies like Next.js, Node.js, Javascript/Typescript, React, and TailwindCSS.
             I enjoy building scalable, user-friendly applications with clean and efficient code.
           </p>
           <p className="text-gray-400 mt-4">
@@ -35,7 +35,7 @@ export default function Home() {
             I am passionate about problem-solving, innovation, continuous learning, and critical thinking.
           </p>
           <p className="text-gray-400 mt-4">
-            When I'm not coding, I enjoy reading sci-fi novels, collaborating on open-source projects, and everything basketball.
+            When I'm not coding, I enjoy reading sci-fi novels, playing chess, and everything basketball.
           </p>
         </div>
       </div>
