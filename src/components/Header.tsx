@@ -8,6 +8,7 @@ export default function Header() {
         <nav className="space-x-6">
           <Link href="/" className="hover:text-gray-300 transition">Home</Link>
           <Link href="/projects" className="hover:text-gray-300 transition">Projects</Link>
+          <Link href="/skills" className="hover:text-gray-300 transition">Skills</Link>
           <Link href="/contact" className="hover:text-gray-300 transition">Contact</Link>
         </nav>
       </div>
