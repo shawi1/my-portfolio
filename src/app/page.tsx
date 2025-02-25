@@ -40,11 +40,15 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Updated Buttons with Modern Theme */}
       <div className="flex justify-center md:justify-start mt-12 space-x-4">
-        <a href="/projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md text-lg transition">
+        <a href="/projects" className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-md text-lg transition">
           View My Projects
         </a>
-        <a href="/contact" className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-md text-lg transition">
+        <a href="/skills" className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md text-lg transition">
+          View My Skills
+        </a>
+        <a href="/contact" className="border border-gray-500 text-gray-300 hover:bg-gray-500 hover:text-white px-6 py-3 rounded-md text-lg transition">
           Contact Me
         </a>
       </div>
