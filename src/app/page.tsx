@@ -1,6 +1,41 @@
+'use client';
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const [displayText, setDisplayText] = useState('');
+  const [finishedTyping, setFinishedTyping] = useState(false);
+  const [command, setCommand] = useState('');
+
+  const fullText = '> Curious about backend stuff? Try typing something... (/vote perhaps?)';
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayText((prev) => prev + fullText.charAt(i));
+      i++;
+      if (i === fullText.length) {
+        clearInterval(interval);
+        setFinishedTyping(true);
+      }
+    }, 35);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (command.trim() === '/vote') {
+        router.push('/vote');
+      } else {
+        alert('Unknown command: ' + command);
+      }
+      setCommand('');
+    }
+  };
+
   return (
     <main className="flex-grow container mx-auto px-6 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
@@ -13,11 +48,11 @@ export default function Home() {
           </div>
 
           <div className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg flex justify-center">
-            <Image 
-              src="/me.png" 
+            <Image
+              src="/me.png"
               alt="My Profile Picture"
-              width={250} 
-              height={250} 
+              width={250}
+              height={250}
               className="rounded-full border-4 border-gray-600 shadow-md"
               priority
             />
@@ -31,7 +66,7 @@ export default function Home() {
             I enjoy building scalable, user-friendly applications with clean and efficient code.
           </p>
           <p className="text-gray-400 mt-4">
-            I have worked on multiple projects, developing efficient, well-structured, and maintainable code. 
+            I have worked on multiple projects, developing efficient, well-structured, and maintainable code.
             I am passionate about problem-solving, innovation, continuous learning, and critical thinking.
           </p>
           <p className="text-gray-400 mt-4">
@@ -39,18 +74,32 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      {/* Updated Buttons with Modern Theme */}
       <div className="flex justify-center md:justify-start mt-12 space-x-4">
-        <a href="/projects" className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-md text-lg transition">
+        <a href="/projects" className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md text-lg transition">
           View My Projects
         </a>
         <a href="/skills" className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md text-lg transition">
           View My Skills
         </a>
-        <a href="/contact" className="border border-gray-500 text-gray-300 hover:bg-gray-500 hover:text-white px-6 py-3 rounded-md text-lg transition">
+        <a href="/contact" className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md text-lg transition">
           Contact Me
         </a>
+      </div>
+      <div className="mt-12 border border-gray-700 rounded p-4 text-center">
+        <p className="text-sm font-mono text-green-400 mb-2">
+          {displayText}
+        </p>
+        {finishedTyping && (
+          <input
+            type="text"
+            value={command}
+            onChange={(e) => setCommand(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="> "
+            className="w-full bg-transparent text-green-400 font-mono outline-none border-none text-center caret-blue-400"
+            autoFocus
+          />
+        )}
       </div>
     </main>
   );
